@@ -1,0 +1,7 @@
+tensorflow>=2.16
+streamlit>=1.35
+pillow>=10.0
+numpy>=1.26
+scikit-learn>=1.4
+matplotlib>=3.8
+pandas>=2.1

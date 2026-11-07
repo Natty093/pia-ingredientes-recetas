@@ -1,0 +1,23 @@
+              precision    recall  f1-score   support
+
+         ajo       0.89      0.94      0.92        18
+     cebolla       1.00      0.78      0.88        18
+       chile       1.00      0.76      0.86        33
+    espinaca       0.76      1.00      0.86        19
+     lechuga       1.00      0.61      0.76        18
+       limon       0.93      0.88      0.90        16
+        maiz       0.97      0.97      0.97        34
+       mango       0.79      0.88      0.83        17
+     manzana       0.92      0.79      0.85        14
+     naranja       0.65      0.93      0.76        14
+        papa       0.87      0.81      0.84        16
+      pepino       0.90      1.00      0.95        18
+    pimiento       0.85      0.97      0.90        34
+        pina       1.00      0.95      0.97        19
+     platano       1.00      1.00      1.00        15
+      tomate       0.76      0.89      0.82        18
+   zanahoria       1.00      0.94      0.97        16
+
+    accuracy                           0.89       337
+   macro avg       0.90      0.89      0.89       337
+weighted avg       0.91      0.89      0.89       337

@@ -1,0 +1,6 @@
+sistema/venv/
+sistema/crudo/
+sistema/data/*
+!sistema/data/.gitkeep
+__pycache__/
+*.pyc

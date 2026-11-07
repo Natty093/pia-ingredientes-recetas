@@ -1,0 +1,442 @@
+[
+  {
+    "nombre": "Guacamole",
+    "ingredientes": [
+      "aguacate",
+      "tomate",
+      "cebolla",
+      "limon",
+      "chile"
+    ],
+    "tiempo_min": 10,
+    "pasos": [
+      "Machaca el aguacate con un tenedor.",
+      "Pica tomate, cebolla y chile finamente.",
+      "Mezcla todo, agrega limón y sal."
+    ]
+  },
+  {
+    "nombre": "Pico de gallo",
+    "ingredientes": [
+      "tomate",
+      "cebolla",
+      "chile",
+      "limon"
+    ],
+    "tiempo_min": 10,
+    "pasos": [
+      "Pica tomate, cebolla y chile en cubos pequeños.",
+      "Mezcla con jugo de limón y sal."
+    ]
+  },
+  {
+    "nombre": "Salsa roja",
+    "ingredientes": [
+      "tomate",
+      "ajo",
+      "cebolla",
+      "chile"
+    ],
+    "tiempo_min": 20,
+    "pasos": [
+      "Hierve tomate, chile, ajo y cebolla 10 minutos.",
+      "Licúa con sal.",
+      "Fríe la salsa 5 minutos en poco aceite."
+    ]
+  },
+  {
+    "nombre": "Ensalada mixta",
+    "ingredientes": [
+      "lechuga",
+      "tomate",
+      "pepino",
+      "cebolla"
+    ],
+    "tiempo_min": 10,
+    "pasos": [
+      "Lava y corta las verduras.",
+      "Mezcla y aliña con limón, sal y aceite."
+    ]
+  },
+  {
+    "nombre": "Ensalada de frutas",
+    "ingredientes": [
+      "manzana",
+      "platano",
+      "naranja",
+      "fresa"
+    ],
+    "tiempo_min": 10,
+    "pasos": [
+      "Pica todas las frutas.",
+      "Agrega jugo de naranja y mezcla."
+    ]
+  },
+  {
+    "nombre": "Licuado de plátano con fresa",
+    "ingredientes": [
+      "platano",
+      "fresa",
+      "leche"
+    ],
+    "tiempo_min": 5,
+    "pasos": [
+      "Licúa todo con hielo.",
+      "Sirve frío."
+    ]
+  },
+  {
+    "nombre": "Huevos a la mexicana",
+    "ingredientes": [
+      "huevo",
+      "tomate",
+      "cebolla",
+      "chile"
+    ],
+    "tiempo_min": 15,
+    "pasos": [
+      "Sofríe cebolla, tomate y chile picados.",
+      "Agrega los huevos batidos.",
+      "Revuelve hasta cuajar."
+    ]
+  },
+  {
+    "nombre": "Omelette de champiñones",
+    "ingredientes": [
+      "huevo",
+      "champinon",
+      "queso",
+      "cebolla"
+    ],
+    "tiempo_min": 15,
+    "pasos": [
+      "Saltea champiñones y cebolla.",
+      "Bate los huevos y cuájalos en sartén.",
+      "Rellena con queso y champiñones y dobla."
+    ]
+  },
+  {
+    "nombre": "Tortilla española",
+    "ingredientes": [
+      "huevo",
+      "papa",
+      "cebolla"
+    ],
+    "tiempo_min": 30,
+    "pasos": [
+      "Fríe papa y cebolla en rodajas hasta suavizar.",
+      "Mezcla con huevo batido.",
+      "Cuaja por ambos lados en la sartén."
+    ]
+  },
+  {
+    "nombre": "Puré de papa",
+    "ingredientes": [
+      "papa",
+      "leche",
+      "ajo"
+    ],
+    "tiempo_min": 25,
+    "pasos": [
+      "Hierve las papas peladas con un diente de ajo.",
+      "Machaca y agrega leche caliente y sal."
+    ]
+  },
+  {
+    "nombre": "Papas al horno",
+    "ingredientes": [
+      "papa",
+      "ajo",
+      "cebolla"
+    ],
+    "tiempo_min": 45,
+    "pasos": [
+      "Corta las papas en gajos.",
+      "Mezcla con ajo, cebolla y aceite.",
+      "Hornea a 200 °C por 35 minutos."
+    ]
+  },
+  {
+    "nombre": "Sopa de verduras",
+    "ingredientes": [
+      "zanahoria",
+      "papa",
+      "calabacita",
+      "cebolla",
+      "tomate"
+    ],
+    "tiempo_min": 35,
+    "pasos": [
+      "Sofríe cebolla y tomate.",
+      "Agrega las verduras picadas y agua.",
+      "Cocina 25 minutos y sazona."
+    ]
+  },
+  {
+    "nombre": "Crema de brócoli",
+    "ingredientes": [
+      "brocoli",
+      "papa",
+      "cebolla",
+      "leche"
+    ],
+    "tiempo_min": 30,
+    "pasos": [
+      "Cuece brócoli, papa y cebolla.",
+      "Licúa con leche.",
+      "Calienta y sazona."
+    ]
+  },
+  {
+    "nombre": "Pollo con verduras",
+    "ingredientes": [
+      "pollo",
+      "zanahoria",
+      "papa",
+      "cebolla",
+      "ajo"
+    ],
+    "tiempo_min": 45,
+    "pasos": [
+      "Sella el pollo con ajo.",
+      "Agrega cebolla, zanahoria y papa.",
+      "Cocina tapado 30 minutos."
+    ]
+  },
+  {
+    "nombre": "Tinga de pollo",
+    "ingredientes": [
+      "pollo",
+      "tomate",
+      "cebolla",
+      "chile"
+    ],
+    "tiempo_min": 40,
+    "pasos": [
+      "Cuece y deshebra el pollo.",
+      "Licúa tomate y chile.",
+      "Sofríe cebolla, agrega salsa y pollo y cocina 10 minutos."
+    ]
+  },
+  {
+    "nombre": "Arroz con verduras",
+    "ingredientes": [
+      "arroz",
+      "zanahoria",
+      "maiz",
+      "cebolla",
+      "tomate"
+    ],
+    "tiempo_min": 35,
+    "pasos": [
+      "Fríe el arroz hasta dorar.",
+      "Agrega licuado de tomate y cebolla.",
+      "Añade zanahoria y maíz, agua y cocina tapado 20 minutos."
+    ]
+  },
+  {
+    "nombre": "Arroz con pollo",
+    "ingredientes": [
+      "arroz",
+      "pollo",
+      "zanahoria",
+      "pimiento",
+      "cebolla"
+    ],
+    "tiempo_min": 45,
+    "pasos": [
+      "Sofríe pollo, cebolla y pimiento.",
+      "Agrega arroz y zanahoria.",
+      "Cubre con agua y cocina 20 minutos."
+    ]
+  },
+  {
+    "nombre": "Pasta con salsa de tomate",
+    "ingredientes": [
+      "pasta",
+      "tomate",
+      "ajo",
+      "cebolla"
+    ],
+    "tiempo_min": 25,
+    "pasos": [
+      "Cuece la pasta.",
+      "Sofríe ajo y cebolla, agrega tomate licuado.",
+      "Mezcla con la pasta."
+    ]
+  },
+  {
+    "nombre": "Pasta con champiñones",
+    "ingredientes": [
+      "pasta",
+      "champinon",
+      "ajo",
+      "leche"
+    ],
+    "tiempo_min": 25,
+    "pasos": [
+      "Cuece la pasta.",
+      "Saltea champiñones con ajo.",
+      "Agrega leche, reduce y mezcla con la pasta."
+    ]
+  },
+  {
+    "nombre": "Frijoles de la olla",
+    "ingredientes": [
+      "frijol",
+      "cebolla",
+      "ajo",
+      "chile"
+    ],
+    "tiempo_min": 120,
+    "pasos": [
+      "Cuece frijoles con cebolla y ajo.",
+      "Agrega chile y sal al final.",
+      "Cocina hasta que estén suaves."
+    ]
+  },
+  {
+    "nombre": "Quesadillas de champiñón",
+    "ingredientes": [
+      "queso",
+      "champinon",
+      "cebolla"
+    ],
+    "tiempo_min": 15,
+    "pasos": [
+      "Saltea champiñones con cebolla.",
+      "Rellena tortillas con queso y champiñones.",
+      "Dora en comal."
+    ]
+  },
+  {
+    "nombre": "Ensalada de espinaca",
+    "ingredientes": [
+      "espinaca",
+      "fresa",
+      "queso",
+      "naranja"
+    ],
+    "tiempo_min": 10,
+    "pasos": [
+      "Lava la espinaca.",
+      "Agrega fresas rebanadas y queso.",
+      "Aliña con jugo de naranja."
+    ]
+  },
+  {
+    "nombre": "Calabacitas con elote",
+    "ingredientes": [
+      "calabacita",
+      "maiz",
+      "tomate",
+      "cebolla",
+      "queso"
+    ],
+    "tiempo_min": 25,
+    "pasos": [
+      "Sofríe cebolla y tomate.",
+      "Agrega calabacita y maíz.",
+      "Termina con queso."
+    ]
+  },
+  {
+    "nombre": "Salteado de verduras",
+    "ingredientes": [
+      "brocoli",
+      "zanahoria",
+      "pimiento",
+      "cebolla",
+      "ajo"
+    ],
+    "tiempo_min": 20,
+    "pasos": [
+      "Corta las verduras.",
+      "Saltea a fuego alto con ajo.",
+      "Sazona con sal y limón."
+    ]
+  },
+  {
+    "nombre": "Agua fresca de pepino y limón",
+    "ingredientes": [
+      "pepino",
+      "limon"
+    ],
+    "tiempo_min": 10,
+    "pasos": [
+      "Licúa pepino con agua.",
+      "Cuela y agrega jugo de limón y azúcar."
+    ]
+  },
+  {
+    "nombre": "Ensalada de mango",
+    "ingredientes": [
+      "mango",
+      "pepino",
+      "limon",
+      "chile"
+    ],
+    "tiempo_min": 10,
+    "pasos": [
+      "Corta mango y pepino en cubos.",
+      "Agrega limón y chile en polvo."
+    ]
+  },
+  {
+    "nombre": "Smoothie de piña y naranja",
+    "ingredientes": [
+      "pina",
+      "naranja",
+      "platano"
+    ],
+    "tiempo_min": 5,
+    "pasos": [
+      "Licúa piña, naranja y plátano con hielo.",
+      "Sirve de inmediato."
+    ]
+  },
+  {
+    "nombre": "Chiles rellenos",
+    "ingredientes": [
+      "chile",
+      "queso",
+      "huevo",
+      "tomate"
+    ],
+    "tiempo_min": 50,
+    "pasos": [
+      "Asa y pela los chiles; rellena con queso.",
+      "Cubre con huevo batido y fríe.",
+      "Sirve con salsa de tomate."
+    ]
+  },
+  {
+    "nombre": "Pollo al limón",
+    "ingredientes": [
+      "pollo",
+      "limon",
+      "ajo"
+    ],
+    "tiempo_min": 35,
+    "pasos": [
+      "Marina el pollo con limón y ajo.",
+      "Dora en sartén.",
+      "Cocina tapado 15 minutos."
+    ]
+  },
+  {
+    "nombre": "Burrito de frijol",
+    "ingredientes": [
+      "frijol",
+      "arroz",
+      "queso",
+      "aguacate"
+    ],
+    "tiempo_min": 15,
+    "pasos": [
+      "Calienta frijoles y arroz.",
+      "Rellena la tortilla con queso.",
+      "Agrega aguacate y enrolla."
+    ]
+  }
+]

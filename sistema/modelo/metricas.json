@@ -1,0 +1,6 @@
+{
+  "test_accuracy": 0.8902077078819275,
+  "test_loss": 0.3853139579296112,
+  "n_clases": 17,
+  "epocas_totales": 12
+}
