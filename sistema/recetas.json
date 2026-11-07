@@ -438,5 +438,420 @@
       "Rellena la tortilla con queso.",
       "Agrega aguacate y enrolla."
     ]
+  },
+  {
+    "nombre": "Ensalada de betabel con naranja",
+    "ingredientes": [
+      "betabel",
+      "naranja",
+      "cebolla"
+    ],
+    "tiempo_min": 15,
+    "pasos": [
+      "Cuece el betabel 30 minutos, pélalo y rebánalo.",
+      "Agrega gajos de naranja y cebolla en plumas.",
+      "Aliña con aceite, sal y un poco de jugo de naranja."
+    ]
+  },
+  {
+    "nombre": "Jugo de betabel y zanahoria",
+    "ingredientes": [
+      "betabel",
+      "zanahoria",
+      "naranja"
+    ],
+    "tiempo_min": 10,
+    "pasos": [
+      "Pela y pica el betabel y la zanahoria.",
+      "Licúa con jugo de naranja y cuela."
+    ]
+  },
+  {
+    "nombre": "Ensalada de col",
+    "ingredientes": [
+      "col",
+      "zanahoria",
+      "limon"
+    ],
+    "tiempo_min": 15,
+    "pasos": [
+      "Ralla la col y la zanahoria.",
+      "Mezcla con jugo de limón, sal y un poco de aceite."
+    ]
+  },
+  {
+    "nombre": "Col salteada con ajo",
+    "ingredientes": [
+      "col",
+      "ajo",
+      "cebolla"
+    ],
+    "tiempo_min": 15,
+    "pasos": [
+      "Fríe ajo y cebolla picados.",
+      "Agrega la col en tiras y saltea 8 minutos a fuego alto.",
+      "Sazona con sal y pimienta."
+    ]
+  },
+  {
+    "nombre": "Coliflor capeada",
+    "ingredientes": [
+      "coliflor",
+      "huevo",
+      "tomate",
+      "cebolla"
+    ],
+    "tiempo_min": 45,
+    "pasos": [
+      "Cuece los ramilletes de coliflor 5 minutos.",
+      "Capéalos con huevo batido y fríelos.",
+      "Sirve en caldillo de tomate y cebolla."
+    ]
+  },
+  {
+    "nombre": "Crema de coliflor",
+    "ingredientes": [
+      "coliflor",
+      "cebolla",
+      "ajo",
+      "leche"
+    ],
+    "tiempo_min": 30,
+    "pasos": [
+      "Cuece la coliflor con cebolla y ajo.",
+      "Licúa con leche y calienta 5 minutos.",
+      "Sazona con sal y pimienta."
+    ]
+  },
+  {
+    "nombre": "Berenjenas a la parmesana",
+    "ingredientes": [
+      "berenjena",
+      "tomate",
+      "ajo",
+      "queso"
+    ],
+    "tiempo_min": 50,
+    "pasos": [
+      "Rebana y asa la berenjena.",
+      "Prepara una salsa de tomate con ajo.",
+      "Alterna capas de berenjena, salsa y queso y hornea 25 minutos."
+    ]
+  },
+  {
+    "nombre": "Berenjena asada con ajo",
+    "ingredientes": [
+      "berenjena",
+      "ajo",
+      "limon"
+    ],
+    "tiempo_min": 25,
+    "pasos": [
+      "Parte la berenjena a la mitad y úntala con ajo y aceite.",
+      "Ásala 20 minutos.",
+      "Termina con jugo de limón y sal."
+    ]
+  },
+  {
+    "nombre": "Té de jengibre con limón",
+    "ingredientes": [
+      "jengibre",
+      "limon"
+    ],
+    "tiempo_min": 10,
+    "pasos": [
+      "Hierve jengibre rebanado en agua 5 minutos.",
+      "Sirve con jugo de limón y azúcar o miel al gusto."
+    ]
+  },
+  {
+    "nombre": "Pollo al jengibre",
+    "ingredientes": [
+      "pollo",
+      "jengibre",
+      "ajo",
+      "cebolla",
+      "arroz"
+    ],
+    "tiempo_min": 30,
+    "pasos": [
+      "Saltea el pollo en tiras con jengibre y ajo picados.",
+      "Agrega cebolla y cocina 5 minutos.",
+      "Sirve con arroz."
+    ]
+  },
+  {
+    "nombre": "Pollo a la naranja",
+    "ingredientes": [
+      "pollo",
+      "naranja",
+      "jengibre",
+      "ajo"
+    ],
+    "tiempo_min": 35,
+    "pasos": [
+      "Dora el pollo en cubos.",
+      "Agrega jugo de naranja, ajo y jengibre.",
+      "Cocina hasta que la salsa espese."
+    ]
+  },
+  {
+    "nombre": "Ensalada de uvas",
+    "ingredientes": [
+      "uvas",
+      "lechuga",
+      "queso"
+    ],
+    "tiempo_min": 10,
+    "pasos": [
+      "Lava la lechuga y parte las uvas a la mitad.",
+      "Mezcla con queso en cubos.",
+      "Aliña con aceite, sal y pimienta."
+    ]
+  },
+  {
+    "nombre": "Smoothie verde de kiwi",
+    "ingredientes": [
+      "kiwi",
+      "platano",
+      "espinaca"
+    ],
+    "tiempo_min": 5,
+    "pasos": [
+      "Pela el kiwi y el plátano.",
+      "Licúa con espinaca y un vaso de agua."
+    ]
+  },
+  {
+    "nombre": "Ensalada tropical",
+    "ingredientes": [
+      "kiwi",
+      "mango",
+      "pina",
+      "uvas"
+    ],
+    "tiempo_min": 15,
+    "pasos": [
+      "Pica todas las frutas en cubos.",
+      "Mezcla y sirve frío."
+    ]
+  },
+  {
+    "nombre": "Compota de pera",
+    "ingredientes": [
+      "pera",
+      "manzana"
+    ],
+    "tiempo_min": 25,
+    "pasos": [
+      "Pela y pica la pera y la manzana.",
+      "Cuécelas con un poco de agua y azúcar hasta que se suavicen."
+    ]
+  },
+  {
+    "nombre": "Ensalada de pera y espinaca",
+    "ingredientes": [
+      "pera",
+      "espinaca",
+      "queso"
+    ],
+    "tiempo_min": 10,
+    "pasos": [
+      "Rebana la pera.",
+      "Mezcla con espinaca y queso.",
+      "Aliña con aceite y sal."
+    ]
+  },
+  {
+    "nombre": "Crema de chícharo",
+    "ingredientes": [
+      "chicharo",
+      "cebolla",
+      "ajo",
+      "leche"
+    ],
+    "tiempo_min": 30,
+    "pasos": [
+      "Sofríe cebolla y ajo.",
+      "Cuece los chícharos 10 minutos.",
+      "Licúa con leche y calienta."
+    ]
+  },
+  {
+    "nombre": "Arroz con chícharos y zanahoria",
+    "ingredientes": [
+      "arroz",
+      "chicharo",
+      "zanahoria",
+      "cebolla"
+    ],
+    "tiempo_min": 35,
+    "pasos": [
+      "Fríe el arroz con cebolla hasta dorar.",
+      "Agrega agua, chícharos y zanahoria en cubos.",
+      "Cocina tapado a fuego bajo 20 minutos."
+    ]
+  },
+  {
+    "nombre": "Ensalada de granada",
+    "ingredientes": [
+      "granada",
+      "lechuga",
+      "pepino",
+      "queso"
+    ],
+    "tiempo_min": 10,
+    "pasos": [
+      "Desgrana la granada.",
+      "Mezcla con lechuga, pepino y queso.",
+      "Aliña con aceite y sal."
+    ]
+  },
+  {
+    "nombre": "Agua de granada",
+    "ingredientes": [
+      "granada",
+      "limon"
+    ],
+    "tiempo_min": 10,
+    "pasos": [
+      "Licúa los granos de granada con agua.",
+      "Cuela y agrega limón y azúcar al gusto."
+    ]
+  },
+  {
+    "nombre": "Ensalada de rábano y pepino",
+    "ingredientes": [
+      "rabano",
+      "pepino",
+      "limon",
+      "cebolla"
+    ],
+    "tiempo_min": 10,
+    "pasos": [
+      "Rebana finamente el rábano, el pepino y la cebolla.",
+      "Aliña con limón y sal."
+    ]
+  },
+  {
+    "nombre": "Soya a la mexicana",
+    "ingredientes": [
+      "soya",
+      "tomate",
+      "cebolla",
+      "chile"
+    ],
+    "tiempo_min": 25,
+    "pasos": [
+      "Hidrata la soya en agua caliente y escúrrela.",
+      "Guísala con tomate, cebolla y chile picados."
+    ]
+  },
+  {
+    "nombre": "Picadillo de soya",
+    "ingredientes": [
+      "soya",
+      "papa",
+      "zanahoria",
+      "tomate"
+    ],
+    "tiempo_min": 35,
+    "pasos": [
+      "Hidrata la soya y escúrrela.",
+      "Cocina papa y zanahoria en cubos con tomate licuado.",
+      "Agrega la soya y cocina 10 minutos."
+    ]
+  },
+  {
+    "nombre": "Camote al horno",
+    "ingredientes": [
+      "camote"
+    ],
+    "tiempo_min": 50,
+    "pasos": [
+      "Envuelve los camotes en papel aluminio.",
+      "Hornea 45 minutos a 200 °C.",
+      "Sirve con canela y azúcar o miel."
+    ]
+  },
+  {
+    "nombre": "Puré de camote",
+    "ingredientes": [
+      "camote",
+      "leche"
+    ],
+    "tiempo_min": 35,
+    "pasos": [
+      "Cuece el camote y pélalo.",
+      "Machácalo con leche caliente y sal."
+    ]
+  },
+  {
+    "nombre": "Ensalada de nabo y zanahoria",
+    "ingredientes": [
+      "nabo",
+      "zanahoria",
+      "limon"
+    ],
+    "tiempo_min": 15,
+    "pasos": [
+      "Ralla el nabo y la zanahoria.",
+      "Aliña con limón, aceite y sal."
+    ]
+  },
+  {
+    "nombre": "Caldo de verduras con nabo",
+    "ingredientes": [
+      "nabo",
+      "papa",
+      "zanahoria",
+      "col",
+      "cebolla"
+    ],
+    "tiempo_min": 40,
+    "pasos": [
+      "Pica todas las verduras.",
+      "Hiérvelas en agua con sal 30 minutos."
+    ]
+  },
+  {
+    "nombre": "Agua de sandía",
+    "ingredientes": [
+      "sandia",
+      "limon"
+    ],
+    "tiempo_min": 10,
+    "pasos": [
+      "Licúa la sandía con agua.",
+      "Agrega jugo de limón y azúcar al gusto y sirve con hielo."
+    ]
+  },
+  {
+    "nombre": "Ensalada de sandía y pepino",
+    "ingredientes": [
+      "sandia",
+      "pepino",
+      "limon",
+      "chile"
+    ],
+    "tiempo_min": 10,
+    "pasos": [
+      "Corta la sandía y el pepino en cubos.",
+      "Sazona con limón, sal y chile en polvo."
+    ]
+  },
+  {
+    "nombre": "Esquites",
+    "ingredientes": [
+      "maiz",
+      "limon",
+      "queso",
+      "chile"
+    ],
+    "tiempo_min": 25,
+    "pasos": [
+      "Cuece los granos de elote con sal.",
+      "Sirve con queso, limón y chile en polvo."
+    ]
   }
 ]
