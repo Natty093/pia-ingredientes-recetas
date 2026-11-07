@@ -1,0 +1,69 @@
+Found 2024 files belonging to 32 classes.
+Found 421 files belonging to 32 classes.
+Found 470 files belonging to 32 classes.
+Clases: ['ajo', 'berenjena', 'betabel', 'camote', 'cebolla', 'chicharo', 'chile', 'col', 'coliflor', 'espinaca', 'granada', 'jengibre', 'kiwi', 'lechuga', 'limon', 'maiz', 'mango', 'manzana', 'nabo', 'naranja', 'papa', 'pepino', 'pera', 'pimiento', 'pina', 'platano', 'rabano', 'sandia', 'soya', 'tomate', 'uvas', 'zanahoria']
+Epoch 1/10
+  62s 891ms/step - accuracy: 0.3617 - loss: 2.4550 - val_accuracy: 0.6865 - val_loss: 1.2374
+Epoch 2/10
+  52s 819ms/step - accuracy: 0.7184 - loss: 1.0257 - val_accuracy: 0.7767 - val_loss: 0.8407
+Epoch 3/10
+  53s 833ms/step - accuracy: 0.7880 - loss: 0.7529 - val_accuracy: 0.8076 - val_loss: 0.7049
+Epoch 4/10
+  53s 823ms/step - accuracy: 0.8404 - loss: 0.5802 - val_accuracy: 0.8290 - val_loss: 0.6337
+Epoch 5/10
+  53s 823ms/step - accuracy: 0.8552 - loss: 0.4951 - val_accuracy: 0.8242 - val_loss: 0.6039
+Epoch 6/10
+  52s 814ms/step - accuracy: 0.8824 - loss: 0.4251 - val_accuracy: 0.8337 - val_loss: 0.5664
+Epoch 7/10
+  53s 825ms/step - accuracy: 0.8918 - loss: 0.3766 - val_accuracy: 0.8361 - val_loss: 0.5579
+Epoch 8/10
+  53s 828ms/step - accuracy: 0.9022 - loss: 0.3509 - val_accuracy: 0.8527 - val_loss: 0.5363
+Epoch 9/10
+  53s 828ms/step - accuracy: 0.9121 - loss: 0.3077 - val_accuracy: 0.8385 - val_loss: 0.5340
+Epoch 10/10
+  52s 807ms/step - accuracy: 0.9195 - loss: 0.2940 - val_accuracy: 0.8385 - val_loss: 0.5193
+Epoch 1/5
+  72s 1000ms/step - accuracy: 0.7475 - loss: 0.8373 - val_accuracy: 0.8385 - val_loss: 0.5363
+Epoch 2/5
+  62s 974ms/step - accuracy: 0.8083 - loss: 0.6518 - val_accuracy: 0.8385 - val_loss: 0.5429
+Epoch 3/5
+  64s 1s/step - accuracy: 0.8315 - loss: 0.5748 - val_accuracy: 0.8337 - val_loss: 0.5462
+Epoch 4/5
+  66s 1s/step - accuracy: 0.8592 - loss: 0.4981 - val_accuracy: 0.8314 - val_loss: 0.5455
+              precision    recall  f1-score   support
+         ajo       0.76      0.93      0.84        14
+   berenjena       1.00      0.77      0.87        13
+     betabel       0.83      0.77      0.80        13
+      camote       0.61      1.00      0.76        11
+     cebolla       0.89      0.67      0.76        12
+    chicharo       0.76      0.87      0.81        15
+       chile       0.86      0.70      0.78        27
+         col       0.87      1.00      0.93        13
+    coliflor       1.00      0.83      0.91        12
+    espinaca       0.72      0.87      0.79        15
+     granada       0.92      0.92      0.92        12
+    jengibre       0.92      1.00      0.96        11
+        kiwi       1.00      0.86      0.92        14
+     lechuga       0.91      0.67      0.77        15
+       limon       0.71      0.83      0.77        12
+        maiz       0.89      1.00      0.94        24
+       mango       0.85      0.92      0.88        12
+     manzana       0.56      0.75      0.64        12
+        nabo       0.85      0.73      0.79        15
+     naranja       0.78      0.64      0.70        11
+        papa       0.83      0.42      0.56        12
+      pepino       1.00      0.86      0.92        14
+        pera       0.67      0.62      0.64        13
+    pimiento       0.77      0.89      0.83        38
+        pina       0.88      0.93      0.90        15
+     platano       0.92      0.92      0.92        12
+      rabano       0.62      0.38      0.48        13
+      sandia       1.00      1.00      1.00        12
+        soya       0.91      0.67      0.77        15
+      tomate       0.83      1.00      0.91        15
+        uvas       0.82      0.93      0.88        15
+   zanahoria       0.87      1.00      0.93        13
+    accuracy                           0.83       470
+   macro avg       0.84      0.82      0.82       470
+weighted avg       0.84      0.83      0.82       470
+Test accuracy: 0.8277  |  Modelo guardado en modelo/
