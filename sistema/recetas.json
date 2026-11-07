@@ -300,7 +300,8 @@
     "ingredientes": [
       "queso",
       "champinon",
-      "cebolla"
+      "cebolla",
+      "tortilla"
     ],
     "tiempo_min": 15,
     "pasos": [
@@ -430,7 +431,8 @@
       "frijol",
       "arroz",
       "queso",
-      "aguacate"
+      "aguacate",
+      "tortilla"
     ],
     "tiempo_min": 15,
     "pasos": [
@@ -852,6 +854,146 @@
     "pasos": [
       "Cuece los granos de elote con sal.",
       "Sirve con queso, limón y chile en polvo."
+    ]
+  },
+  {
+    "nombre": "Chilaquiles rojos",
+    "ingredientes": [
+      "tortilla",
+      "tomate",
+      "chile",
+      "cebolla",
+      "crema",
+      "queso"
+    ],
+    "tiempo_min": 25,
+    "pasos": [
+      "Corta las tortillas en triángulos y fríelas hasta que estén crujientes.",
+      "Licúa tomate, chile y cebolla y cuece la salsa 10 minutos.",
+      "Baña los totopos con la salsa y sirve con crema y queso."
+    ]
+  },
+  {
+    "nombre": "Tacos de papa",
+    "ingredientes": [
+      "tortilla",
+      "papa",
+      "cebolla",
+      "crema"
+    ],
+    "tiempo_min": 35,
+    "pasos": [
+      "Cuece y machaca la papa con cebolla picada y sal.",
+      "Rellena las tortillas, dóblalas y fríelas.",
+      "Sirve con crema."
+    ]
+  },
+  {
+    "nombre": "Enchiladas verdes de pollo",
+    "ingredientes": [
+      "tortilla",
+      "pollo",
+      "chile",
+      "cebolla",
+      "crema",
+      "queso"
+    ],
+    "tiempo_min": 40,
+    "pasos": [
+      "Cuece y deshebra el pollo.",
+      "Prepara una salsa verde con chile y cebolla.",
+      "Rellena las tortillas con pollo, báñalas en salsa y cubre con crema y queso."
+    ]
+  },
+  {
+    "nombre": "Tostadas de pollo",
+    "ingredientes": [
+      "tortilla",
+      "pollo",
+      "lechuga",
+      "tomate",
+      "crema"
+    ],
+    "tiempo_min": 25,
+    "pasos": [
+      "Fríe las tortillas hasta que estén crujientes.",
+      "Cubre con pollo deshebrado, lechuga y tomate.",
+      "Termina con crema y sal."
+    ]
+  },
+  {
+    "nombre": "Molletes",
+    "ingredientes": [
+      "pan",
+      "frijol",
+      "queso",
+      "tomate",
+      "cebolla"
+    ],
+    "tiempo_min": 20,
+    "pasos": [
+      "Parte el pan a la mitad y úntalo con frijoles.",
+      "Cubre con queso y hornea hasta que se derrita.",
+      "Sirve con pico de gallo de tomate y cebolla."
+    ]
+  },
+  {
+    "nombre": "Torta de pollo",
+    "ingredientes": [
+      "pan",
+      "pollo",
+      "aguacate",
+      "tomate",
+      "lechuga"
+    ],
+    "tiempo_min": 15,
+    "pasos": [
+      "Calienta el pan.",
+      "Rellena con pollo, aguacate, tomate y lechuga."
+    ]
+  },
+  {
+    "nombre": "Sándwich de verduras",
+    "ingredientes": [
+      "pan",
+      "lechuga",
+      "tomate",
+      "pepino",
+      "queso"
+    ],
+    "tiempo_min": 10,
+    "pasos": [
+      "Arma el pan con lechuga, rebanadas de tomate y pepino y queso."
+    ]
+  },
+  {
+    "nombre": "Pan francés",
+    "ingredientes": [
+      "pan",
+      "huevo",
+      "leche"
+    ],
+    "tiempo_min": 15,
+    "pasos": [
+      "Bate el huevo con la leche.",
+      "Remoja las rebanadas de pan y dóralas en sartén.",
+      "Sirve con azúcar o miel."
+    ]
+  },
+  {
+    "nombre": "Rajas con crema",
+    "ingredientes": [
+      "chile",
+      "pimiento",
+      "cebolla",
+      "maiz",
+      "crema"
+    ],
+    "tiempo_min": 25,
+    "pasos": [
+      "Asa y pela los chiles y pimientos y córtalos en rajas.",
+      "Sofríelos con cebolla y elote.",
+      "Agrega crema y cocina 5 minutos."
     ]
   }
 ]
