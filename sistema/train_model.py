@@ -108,6 +108,9 @@ def main():
     ap.add_argument("--epochs", type=int, default=10)
     ap.add_argument("--finetune_epochs", type=int, default=5)
     ap.add_argument("--batch", type=int, default=32)
+    ap.add_argument("--finetune_lr", type=float, default=1e-5)
+    ap.add_argument("--capas_finetune", type=int, default=30,
+                    help="ultimas capas del modelo base que se reentrenan en el fine-tuning")
     a = ap.parse_args()
 
     SALIDA.mkdir(exist_ok=True)
@@ -123,17 +126,17 @@ def main():
                    loss="sparse_categorical_crossentropy", metrics=["accuracy"])
     h1 = modelo.fit(train, validation_data=val, epochs=a.epochs, callbacks=[stop])
 
-    # Fase 2: fine-tuning de las ultimas 30 capas del modelo base
+    # Fase 2: fine-tuning de las ultimas capas del modelo base
     base.trainable = True
-    for capa in base.layers[:-30]:
+    for capa in base.layers[:-a.capas_finetune]:
         capa.trainable = False
     # Las BatchNormalization se dejan congeladas: si se descongelan, recalculan
     # sus estadisticas con cada lote (aunque se llame con training=False) y el
     # modelo pierde exactitud al iniciar el fine-tuning
-    for capa in base.layers[-30:]:
+    for capa in base.layers[-a.capas_finetune:]:
         if isinstance(capa, layers.BatchNormalization):
             capa.trainable = False
-    modelo.compile(optimizer=tf.keras.optimizers.Adam(1e-5),
+    modelo.compile(optimizer=tf.keras.optimizers.Adam(a.finetune_lr),
                    loss="sparse_categorical_crossentropy", metrics=["accuracy"])
     h2 = modelo.fit(train, validation_data=val, epochs=a.finetune_epochs,
                     callbacks=[stop])
@@ -141,7 +144,9 @@ def main():
     hist = {k: h1.history[k] + h2.history[k] for k in h1.history}
     graficar_curvas(hist, SALIDA / "curvas_entrenamiento.png")
 
-    # Evaluacion final en test
+    # Evaluacion final. Para comparar configuraciones se usa val_accuracy;
+    # test se reserva para reportar el resultado del modelo elegido
+    _, val_acc = modelo.evaluate(val, verbose=0)
     loss, acc = modelo.evaluate(test, verbose=0)
     y_true = np.concatenate([y.numpy() for _, y in test])
     y_pred = np.argmax(modelo.predict(test, verbose=0), axis=1)
@@ -156,8 +161,9 @@ def main():
     (SALIDA / "clases.json").write_text(
         json.dumps(clases, ensure_ascii=False, indent=2), encoding="utf-8")
     (SALIDA / "metricas.json").write_text(json.dumps(
-        {"test_accuracy": float(acc), "test_loss": float(loss),
-         "n_clases": len(clases), "epocas_totales": len(hist["loss"])},
+        {"val_accuracy": float(val_acc), "test_accuracy": float(acc), "test_loss": float(loss),
+         "n_clases": len(clases), "epocas_totales": len(hist["loss"]),
+         "finetune_lr": a.finetune_lr, "capas_finetune": a.capas_finetune},
         indent=2))
     print(f"\nTest accuracy: {acc:.4f}  |  Modelo guardado en {SALIDA}/")
 
