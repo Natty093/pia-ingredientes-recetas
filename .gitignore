@@ -1,5 +1,6 @@
 sistema/venv/
 sistema/crudo/
+sistema/kaggle/
 sistema/data/*
 !sistema/data/.gitkeep
 __pycache__/
