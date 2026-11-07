@@ -127,6 +127,12 @@ def main():
     base.trainable = True
     for capa in base.layers[:-30]:
         capa.trainable = False
+    # Las BatchNormalization se dejan congeladas: si se descongelan, recalculan
+    # sus estadisticas con cada lote (aunque se llame con training=False) y el
+    # modelo pierde exactitud al iniciar el fine-tuning
+    for capa in base.layers[-30:]:
+        if isinstance(capa, layers.BatchNormalization):
+            capa.trainable = False
     modelo.compile(optimizer=tf.keras.optimizers.Adam(1e-5),
                    loss="sparse_categorical_crossentropy", metrics=["accuracy"])
     h2 = modelo.fit(train, validation_data=val, epochs=a.finetune_epochs,
