@@ -12,11 +12,11 @@ import json
 import sys
 from pathlib import Path
 
-import numpy as np
 import tensorflow as tf
 from PIL import Image
 
 from recommender import Recomendador, normalizar
+from vision import clasificar
 
 BASE = Path(__file__).parent
 
@@ -27,21 +27,30 @@ def main(carpeta):
               json.loads((BASE / "modelo" / "clases.json").read_text(encoding="utf-8"))]
     rec = Recomendador(BASE / "recetas.json")
 
+    carpeta = Path(carpeta)
+    if not carpeta.is_dir():
+        sys.exit(f"No existe la carpeta '{carpeta}'.")
+
     filas = []
-    for f in sorted(Path(carpeta).iterdir()):
+    for f in sorted(carpeta.iterdir()):
         if f.suffix.lower() not in {".jpg", ".jpeg", ".png", ".webp"}:
             continue
-        img = Image.open(f).convert("RGB").resize((224, 224))
-        p = modelo.predict(np.array(img, dtype="float32")[None], verbose=0)[0]
-        i = int(np.argmax(p))
+        res = clasificar(modelo, clases, Image.open(f))
+        pred, conf = res["top"][0]
         real = normalizar(f.stem.split("_")[0])
-        recetas = rec.recomendar([clases[i]], top_n=3, min_cobertura=0.1)
+        recetas = rec.recomendar([pred], top_n=3, min_cobertura=0) \
+            if res["estado"] != "no_ingrediente" else []
         filas.append({
-            "archivo": f.name, "real": real, "prediccion": clases[i],
-            "confianza": f"{p[i]:.3f}", "correcto": "si" if real == clases[i] else "no",
+            "archivo": f.name, "real": real, "prediccion": pred,
+            "confianza": f"{conf:.3f}", "estado": res["estado"],
+            "correcto": "si" if real == pred else "no",
             "recetas_top3": " | ".join(r["nombre"] for r in recetas),
         })
         print(filas[-1])
+
+    if not filas:
+        sys.exit(f"No hay imagenes (.jpg, .jpeg, .png, .webp) en '{carpeta}'. "
+                 "Agrega fotos nombradas como <ingrediente>_<descripcion>.jpg")
 
     salida = BASE / "resultados_pruebas.csv"
     with open(salida, "w", newline="", encoding="utf-8") as fh:
