@@ -16,7 +16,8 @@ from pathlib import Path
 BASICOS = {"sal", "agua", "aceite", "pimienta", "azucar"}  # se asumen disponibles
 
 _BONITO = {"pina": "piña", "champinon": "champiñón", "limon": "limón",
-           "platano": "plátano", "azucar": "azúcar", "brocoli": "brócoli"}
+           "platano": "plátano", "azucar": "azúcar", "brocoli": "brócoli",
+           "chicharo": "chícharo", "rabano": "rábano", "sandia": "sandía"}
 
 
 def normalizar(texto):
