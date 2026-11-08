@@ -25,8 +25,13 @@ def main():
 
     random.seed(a.semilla)
     destino = Path(a.destino)
+    # Si data/ ya tiene una division anterior, la nueva se mezclaria con ella y una
+    # misma foto podria quedar en train y en test
+    if any(f.is_file() for f in destino.rglob("*") if f.name != ".gitkeep"):
+        raise SystemExit(f"'{destino}' ya tiene imagenes de una division anterior. "
+                         "Borra train/, val/ y test/ dentro de ella y vuelve a ejecutar.")
     for clase in sorted(p for p in Path(a.origen).iterdir() if p.is_dir()):
-        imgs = [f for f in clase.iterdir() if f.suffix.lower() in EXT]
+        imgs = sorted(f for f in clase.iterdir() if f.suffix.lower() in EXT)  # mismo orden siempre
         random.shuffle(imgs)
         n = len(imgs)
         n_train, n_val = int(n * 0.70), int(n * 0.15)
