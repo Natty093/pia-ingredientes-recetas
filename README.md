@@ -26,6 +26,7 @@ sistema/
 ├── app.py                  # Interfaz Streamlit
 ├── train_model.py          # Entrenamiento y evaluación de la CNN
 ├── recommender.py          # Motor de recomendación
+├── vision.py               # Preparación de la foto (EXIF) y clasificación con estado
 ├── preparar_kaggle.py      # Convierte el dataset de Kaggle y elimina duplicados
 ├── dividir_dataset.py      # Divide el dataset en train/val/test (70/15/15)
 ├── pruebas.py              # Pruebas por lote -> resultados_pruebas.csv
@@ -97,12 +98,35 @@ Pon fotos propias en `sistema/imagenes_prueba/` nombradas `ingrediente_descripci
 cd sistema
 python pruebas.py imagenes_prueba
 ```
+La tabla `resultados_pruebas.csv` incluye la columna `estado`: `aceptado`, `confirmar`
+(confianza baja) o `no_ingrediente`.
+
+### Agregar la clase "otro" (recomendado)
+La CNN siempre elige uno de sus ingredientes, aunque la foto no tenga ninguno. Para que aprenda
+a decir "no es un ingrediente", crea `crudo/otro/` con fotos que no sean ingredientes (mesa vacía,
+manos, platos, cocina; unas 100-200), vuelve a ejecutar `dividir_dataset.py` y reentrena.
+La app y `pruebas.py` ya interpretan la clase `otro` como "no reconocido".
 
 ## Modelos y librerías usadas
 - MobileNetV2 preentrenado en ImageNet (Keras Applications), reentrenado con transfer learning.
 - TensorFlow/Keras, scikit-learn (métricas), Streamlit (interfaz), Pillow, NumPy, Matplotlib.
 
+## Cómo reconoce la app una foto
+1. Endereza la foto según su EXIF (las fotos de celular suelen venir giradas).
+2. Si la imagen es casi plana (negra, blanca, un solo color), la marca como *No reconocido*.
+3. Si la confianza es mayor o igual al umbral (0.70 por defecto), agrega el ingrediente solo.
+   Si es menor, muestra las 3 opciones más probables como botones para que el usuario elija.
+4. Si ninguna receta llega a la cobertura mínima (pasa con 1 o 2 ingredientes), muestra las
+   más cercanas con un aviso en lugar de una lista vacía.
+
+## Versiones
+- `v1-original`: versión antes de las mejoras de robustez. Para volver a ella:
+  `git checkout v1-original` (o elige la etiqueta en el selector de ramas de GitHub).
+
 ## Limitaciones y trabajo futuro
+- Con fotos distintas a las del dataset (fondo blanco, otra iluminación) la exactitud baja
+  bastante: en una prueba con 660 fotos del dataset Fruits-360 acertó 46.5 %. Lo que más ayuda
+  es agregar fotos propias tomadas con celular (20-30 por ingrediente) y la clase `otro`.
 - Reconoce un ingrediente por foto.
 - Las clases que más confunde son rábano, papa (con manzana), manzana y pera.
 - Ampliar la CNN a ingredientes que hoy se agregan a mano: de despensa (tortilla, pan, huevo,

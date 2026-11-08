@@ -8,14 +8,13 @@ from datetime import datetime
 from html import escape
 from pathlib import Path
 
-import numpy as np
 import streamlit as st
 from PIL import Image, ImageOps
 
 from recommender import Recomendador, bonito, normalizar
+from vision import CLASE_OTRO, clasificar
 
 BASE = Path(__file__).parent
-IMG_SIZE = (224, 224)
 
 EMOJI = {
     "aguacate": "🥑", "ajo": "🧄", "arroz": "🍚", "berenjena": "🍆", "brocoli": "🥦",
@@ -95,13 +94,6 @@ def cargar_recomendador():
     return Recomendador(BASE / "recetas.json")
 
 
-def predecir(modelo, clases, img, k=3):
-    x = np.array(img.convert("RGB").resize(IMG_SIZE), dtype="float32")[None]
-    p = modelo.predict(x, verbose=0)[0]
-    idx = np.argsort(p)[::-1][:k]
-    return [(clases[i], float(p[i])) for i in idx]
-
-
 def con_emoji(ing):
     return f"{EMOJI.get(ing, '🥗')} {bonito(ing)}"
 
@@ -168,16 +160,17 @@ except Exception as e:
     st.stop()
 
 recomendador = cargar_recomendador()
+ingredientes_cnn = [c for c in clases if c != CLASE_OTRO]
 
 with st.sidebar:
     st.header("⚙️ Parámetros")
-    umbral = st.slider("Confianza mínima para aceptar un ingrediente", 0.1, 0.99, 0.60, 0.05,
+    umbral = st.slider("Confianza mínima para aceptar un ingrediente", 0.1, 0.99, 0.70, 0.05,
                        help="Las fotos por debajo de este valor no se agregan solas: tú decides.")
     top_n = st.slider("Número de recetas", 1, 10, 5)
     min_cob = st.slider("Cobertura mínima de la receta", 0.1, 1.0, 0.3, 0.05,
                         help="Fracción de los ingredientes de la receta que ya debes tener.")
     st.divider()
-    st.caption(f"La CNN reconoce **{len(clases)}** frutas y verduras. Los ingredientes de despensa "
+    st.caption(f"La CNN reconoce **{len(ingredientes_cnn)}** frutas y verduras. Los ingredientes de despensa "
                "(huevo, pollo, queso, tortilla...) se agregan a mano.")
     st.caption("Modelo: MobileNetV2 con transfer learning · Recomendador: cobertura + Jaccard + coseno.")
 
@@ -200,24 +193,36 @@ with tab_ing:
     if imagenes:
         cols = st.columns(min(4, len(imagenes)))
         for i, (nombre, img) in enumerate(imagenes):
-            top = predecir(modelo, clases, img)
+            res = clasificar(modelo, clases, img, umbral)
+            top, estado = res["top"], res["estado"]
             ing, conf = top[0]
-            aceptado = conf >= umbral
-            if aceptado:
+            if estado == "aceptado":
                 detectados.append(ing)
             with cols[i % len(cols)]:
                 with st.container(border=True):
                     # Recorte del mismo tamaño para que las tarjetas queden alineadas
-                    st.image(ImageOps.fit(img.convert("RGB"), (400, 300)), use_container_width=True)
-                    estado = ('<span class="etiqueta ok">✓ Agregado</span>' if aceptado else
-                              '<span class="etiqueta baja">⚠ Confianza baja</span>')
-                    st.markdown(f'<div class="prediccion">{escape(con_emoji(ing))}</div>{estado}',
+                    foto = ImageOps.exif_transpose(img).convert("RGB")
+                    st.image(ImageOps.fit(foto, (400, 300)), width="stretch")
+                    if estado == "no_ingrediente":
+                        st.markdown('<div class="prediccion">🤔 No parece un ingrediente</div>'
+                                    '<span class="etiqueta falta">✗ No reconocido</span>',
+                                    unsafe_allow_html=True)
+                        st.caption("Prueba con una foto más cercana y con buena luz, "
+                                   "o agrega el ingrediente a mano abajo.")
+                        continue
+                    etiqueta = ('<span class="etiqueta ok">✓ Agregado</span>' if estado == "aceptado"
+                                else '<span class="etiqueta baja">⚠ Confianza baja</span>')
+                    st.markdown(f'<div class="prediccion">{escape(con_emoji(ing))}</div>{etiqueta}',
                                 unsafe_allow_html=True)
                     st.progress(conf, text=f"Confianza: {conf:.1%}")
                     otras = " · ".join(f"{bonito(c)} {p:.1%}" for c, p in top[1:])
                     st.caption(f"Otras opciones: {otras}")
-                    if not aceptado:
-                        st.caption("Confírmalo o corrígelo abajo.")
+                    if estado == "confirmar":
+                        st.caption("¿Cuál es? Tócalo para agregarlo:")
+                        with st.container(horizontal=True):
+                            for c, _ in top:
+                                st.button(con_emoji(c), key=f"conf_{i}_{nombre}_{c}",
+                                          on_click=agregar, args=(c,))
 
     # La selección vive en session_state para poder agregar ingredientes con los botones.
     # Cuando cambian las fotos se reemplazan los ingredientes detectados y se conservan los
@@ -232,7 +237,7 @@ with tab_ing:
 
     # ---------- Ingredientes ----------
     st.markdown('<div class="seccion">🧺 Ingredientes seleccionados</div>', unsafe_allow_html=True)
-    opciones = sorted(set(clases) | set(recomendador.vocabulario))
+    opciones = sorted(set(ingredientes_cnn) | set(recomendador.vocabulario))
     seleccion = st.multiselect("Ingredientes disponibles", opciones, key="sel",
                                format_func=bonito, label_visibility="collapsed",
                                placeholder="🔍 Escribe tus ingredientes: huevo, tortilla, queso...")
@@ -259,7 +264,14 @@ with tab_ing:
         recetas = recomendador.recomendar(seleccion, top_n=top_n, min_cobertura=min_cob)
         st.markdown('<div class="seccion">🍽️ Recetas para ti</div>', unsafe_allow_html=True)
         if not recetas:
-            st.info("No hay recetas con esos ingredientes. Prueba bajar la cobertura mínima o agregar más.")
+            # Con uno o dos ingredientes casi ninguna receta llega a la cobertura mínima:
+            # en vez de no mostrar nada, se muestran las más cercanas
+            recetas = recomendador.recomendar(seleccion, top_n=top_n, min_cobertura=0)
+            if recetas:
+                st.info(f"Ninguna receta llega al {min_cob:.0%} de ingredientes que ya tienes. "
+                        "Estas son las más cercanas; agrega más ingredientes para mejores resultados.")
+            else:
+                st.info("No hay recetas con esos ingredientes. Prueba agregar otros.")
         cols = st.columns(2)
         for i, r in enumerate(recetas):
             with cols[i % 2]:

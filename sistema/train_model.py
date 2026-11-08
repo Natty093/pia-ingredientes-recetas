@@ -3,6 +3,8 @@ Entrenamiento de la CNN (transfer learning con MobileNetV2).
 
 Estructura esperada:
     data/train/<ingrediente>/*.jpg
+    data/train/otro/*.jpg      (opcional: fotos que NO son ingredientes -mesa, manos,
+                                platos vacios-. La app la interpreta como "no reconocido")
     data/val/<ingrediente>/*.jpg
     data/test/<ingrediente>/*.jpg
 
@@ -49,10 +51,13 @@ def construir_modelo(n_clases):
         include_top=False, weights="imagenet", input_shape=IMG_SIZE + (3,))
     base.trainable = False
 
+    # Rotaciones de hasta 90° y volteos en ambos ejes: las fotos de celular pueden
+    # llegar en cualquier orientación. La traslación simula recortes no centrados
     aumento = tf.keras.Sequential([
-        layers.RandomFlip("horizontal"),
-        layers.RandomRotation(0.1),
-        layers.RandomZoom(0.15),
+        layers.RandomFlip("horizontal_and_vertical"),
+        layers.RandomRotation(0.25, fill_mode="reflect"),
+        layers.RandomZoom(0.2),
+        layers.RandomTranslation(0.1, 0.1, fill_mode="reflect"),
         layers.RandomContrast(0.2),
         layers.RandomBrightness(0.2, value_range=(0, 255)),
     ], name="aumento_datos")
@@ -157,7 +162,12 @@ def main():
     (SALIDA / "reporte_clasificacion.txt").write_text(reporte, encoding="utf-8")
     print(reporte)
 
-    modelo.save(SALIDA / "modelo_ingredientes.keras")
+    # Se guarda sin el estado del optimizador (no se necesita para predecir):
+    # el archivo pesa ~10 MB en vez de ~22 MB
+    temporal = SALIDA / "_temporal.keras"
+    modelo.save(temporal)
+    tf.keras.models.load_model(temporal, compile=False).save(SALIDA / "modelo_ingredientes.keras")
+    temporal.unlink()
     (SALIDA / "clases.json").write_text(
         json.dumps(clases, ensure_ascii=False, indent=2), encoding="utf-8")
     (SALIDA / "metricas.json").write_text(json.dumps(
