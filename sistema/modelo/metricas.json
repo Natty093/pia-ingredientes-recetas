@@ -1,6 +1,9 @@
 {
-  "test_accuracy": 0.848936140537262,
-  "test_loss": 0.5490177273750305,
-  "n_clases": 32,
-  "epocas_totales": 15
+  "val_accuracy": 0.918120801448822,
+  "test_accuracy": 0.8995037078857422,
+  "test_loss": 0.3575454354286194,
+  "n_clases": 36,
+  "epocas_totales": 15,
+  "finetune_lr": 1e-05,
+  "capas_finetune": 30
 }

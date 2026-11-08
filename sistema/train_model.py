@@ -116,8 +116,12 @@ def main():
     ap.add_argument("--finetune_lr", type=float, default=1e-5)
     ap.add_argument("--capas_finetune", type=int, default=30,
                     help="ultimas capas del modelo base que se reentrenan en el fine-tuning")
+    ap.add_argument("--salida", default="modelo",
+                    help="carpeta donde se guardan el modelo, las metricas y las graficas")
     a = ap.parse_args()
 
+    global SALIDA
+    SALIDA = Path(a.salida)
     SALIDA.mkdir(exist_ok=True)
     train, val, test, clases = cargar_datos(a.data, a.batch)
     print("Clases:", clases)

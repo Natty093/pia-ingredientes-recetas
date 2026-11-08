@@ -8,10 +8,10 @@ y recomienda recetas con un **sistema de recomendación por similitud**
 
 | | |
 |---|---|
-| Ingredientes que reconoce la CNN | **32** frutas y verduras |
-| Exactitud en prueba | **84.9 %** (470 imágenes que el modelo nunca vio) |
-| Exactitud en validación | 84.8 % |
-| Recetas | **95** |
+| Ingredientes que reconoce la CNN | **36** frutas y verduras |
+| Exactitud en prueba | **90.0 %** (806 imágenes que el modelo nunca vio) |
+| Exactitud en validación | 91.8 % |
+| Recetas | **101** |
 
 El modelo incluido reconoce frutas y verduras. Los ingredientes de despensa (huevo, pollo, queso, arroz,
 frijol, leche, pasta, tortilla, pan, crema…) se agregan a mano en la app. Para que la CNN también
@@ -31,8 +31,9 @@ sistema/
 ├── preparar_kaggle.py      # Convierte el dataset de Kaggle y elimina duplicados
 ├── preparar_roboflow.py    # Agrega huevo, queso, leche y harina desde Roboflow
 ├── dividir_dataset.py      # Divide el dataset en train/val/test (70/15/15)
+├── agregar_vegetales.py    # Agrega el segundo dataset (Vegetable Image Dataset)
 ├── pruebas.py              # Pruebas por lote -> resultados_pruebas.csv
-├── recetas.json            # Base de 95 recetas
+├── recetas.json            # Base de 101 recetas
 ├── requirements.txt
 ├── data/                   # train/ val/ test/ (se genera, no se sube a git)
 ├── modelo/                 # modelo entrenado, clases.json, métricas, gráficas, log
@@ -79,7 +80,21 @@ también están en train). Sin este paso, la misma foto queda en entrenamiento y
 exactitud medida sale inflada. Quedan 2,915 imágenes únicas: 2,024 de entrenamiento, 421 de
 validación y 470 de prueba.
 
-### 1b. (Opcional) Agregar huevo, queso, leche y harina
+### 1b. Segundo dataset: Vegetable Image Dataset (incluido en el modelo)
+Después se agrega un segundo dataset de Kaggle, **Vegetable Image Dataset**
+(https://www.kaggle.com/datasets/misrakahmed/vegetable-image-dataset), con fotos de verduras en
+mercados y cultivos. Descomprímelo fuera del repo y ejecuta:
+```bash
+python agregar_vegetales.py --origen "ruta/a/Vegetable Images" --data data --destino data_v2
+```
+Agrega 4 clases nuevas (brócoli, calabaza, papaya y ejote, 250 fotos cada una) y 150 fotos más a
+8 clases que ya existían (papa, tomate, zanahoria, pepino, pimiento, col, coliflor y berenjena).
+También elimina duplicados por MD5. No usa su clase *Radish*, porque es rábano blanco (daikon),
+distinto del rábano rojo. Las fotos que ya estaban en `data/` no cambian de conjunto, así que el
+modelo nuevo se puede comparar con el anterior usando las mismas fotos de prueba. Quedan 5,115
+imágenes: 3,564 de entrenamiento, 745 de validación y 806 de prueba.
+
+### 1c. (Opcional) Agregar huevo, queso, leche y harina
 Dataset de Roboflow **recipes** (https://universe.roboflow.com/thatonenerds-space/recipes-bkrot).
 Descárgalo en formato **Folder Structure** (pide crear una cuenta gratuita; revisa su licencia
 antes de usarlo), descomprímelo en `sistema/roboflow/` (debe quedar `roboflow/train/eggs/...`) y,
@@ -105,10 +120,11 @@ Para agregar un ingrediente con fotos propias (por ejemplo pollo), crea `crudo/p
 
 ### 2. Entrenar
 ```bash
-python train_model.py --data data --epochs 10 --finetune_epochs 5
+python train_model.py --data data_v2 --epochs 10 --finetune_epochs 5
 ```
 Dos fases: primero solo el clasificador (base congelada) y después fine-tuning de las últimas
-30 capas de MobileNetV2 con las capas BatchNormalization congeladas. En CPU tarda unos 15 minutos.
+30 capas de MobileNetV2 con las capas BatchNormalization congeladas. En CPU tarda unos 25 minutos.
+Con `--salida otra_carpeta` el modelo se guarda en otra carpeta sin reemplazar el de `modelo/`.
 
 Opciones para probar otras configuraciones: `--finetune_lr` (por defecto 1e-5) y
 `--capas_finetune` (por defecto 30). Compara las configuraciones con `val_accuracy` de
@@ -151,10 +167,12 @@ La app y `pruebas.py` ya interpretan la clase `otro` como "no reconocido".
 
 ## Limitaciones y trabajo futuro
 - Con fotos distintas a las del dataset (fondo blanco, otra iluminación) la exactitud baja
-  bastante: en una prueba con 660 fotos del dataset Fruits-360 acertó 46.5 %. Lo que más ayuda
-  es agregar fotos propias tomadas con celular (20-30 por ingrediente) y la clase `otro`.
+  bastante: en una prueba con 660 fotos del dataset Fruits-360, el modelo anterior de 32 clases
+  acertó 46.5 %, y con fotos del Vegetable Image Dataset bajaba a 63.6 %. Por eso se agregó ese
+  segundo dataset (el modelo actual sube a 99.5 % con esas fotos). Lo que más ayudaría ahora es
+  agregar fotos propias tomadas con celular (20-30 por ingrediente) y la clase `otro`.
 - Reconoce un ingrediente por foto.
-- Las clases que más confunde son rábano, papa (con manzana), manzana y pera.
+- Las clases que más confunde son rábano, manzana, soya y cebolla.
 - Ampliar la CNN a ingredientes que hoy se agregan a mano: de despensa (tortilla, pan, huevo,
-  queso) y frutas y verduras que no vienen en el dataset (aguacate, fresa, brócoli, calabacita,
+  queso) y frutas y verduras que no vienen en los datasets (aguacate, fresa, calabacita,
   champiñón).

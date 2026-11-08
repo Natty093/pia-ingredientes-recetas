@@ -1597,5 +1597,100 @@
       "Incorpora ½ taza de crema y sal, y cocina 3 minutos.",
       "Espolvorea queso rallado y sirve."
     ]
+  },
+  {
+    "nombre": "Crema de calabaza",
+    "ingredientes": [
+      "calabaza",
+      "cebolla",
+      "ajo",
+      "leche"
+    ],
+    "tiempo_min": 35,
+    "pasos": [
+      "Pela 500 g de calabaza, quítale las semillas y córtala en cubos.",
+      "Sofríe ½ cebolla y 1 diente de ajo picados en 1 cucharada de aceite hasta que estén transparentes.",
+      "Agrega la calabaza y 2 tazas de agua con sal, y cocina tapado 20 minutos, hasta que esté suave.",
+      "Licúa con 1 taza de leche hasta que quede terso.",
+      "Regresa a la olla, calienta 5 minutos a fuego bajo y ajusta la sal y la pimienta."
+    ]
+  },
+  {
+    "nombre": "Calabaza en tacha",
+    "ingredientes": [
+      "calabaza"
+    ],
+    "tiempo_min": 60,
+    "pasos": [
+      "Corta 1 calabaza de Castilla en trozos grandes, con cáscara y sin semillas.",
+      "En una olla grande pon 2 tazas de agua, 1 taza de azúcar o piloncillo y una raja de canela si tienes.",
+      "Hierve hasta que el azúcar se disuelva y se forme una miel ligera.",
+      "Acomoda la calabaza con la pulpa hacia abajo, tapa y cocina a fuego bajo 40 minutos, bañándola con la miel de vez en cuando.",
+      "Sírvela tibia o fría con un poco de su miel."
+    ]
+  },
+  {
+    "nombre": "Licuado de papaya",
+    "ingredientes": [
+      "papaya",
+      "leche",
+      "platano"
+    ],
+    "tiempo_min": 5,
+    "pasos": [
+      "Pela y corta 1 taza de papaya en trozos, sin semillas.",
+      "Pela 1 plátano.",
+      "Licúa la fruta con 1 taza de leche fría y 3 o 4 hielos.",
+      "Agrega azúcar o miel al gusto y sirve de inmediato."
+    ]
+  },
+  {
+    "nombre": "Ensalada de papaya y mango",
+    "ingredientes": [
+      "papaya",
+      "mango",
+      "limon"
+    ],
+    "tiempo_min": 10,
+    "pasos": [
+      "Pela 1 taza de papaya y 1 mango, y córtalos en cubos.",
+      "Mézclalos en un tazón.",
+      "Agrega el jugo de 1 limón y una pizca de sal.",
+      "Espolvorea chile en polvo si te gusta y sirve frío."
+    ]
+  },
+  {
+    "nombre": "Ejotes con huevo",
+    "ingredientes": [
+      "ejote",
+      "huevo",
+      "tomate",
+      "cebolla"
+    ],
+    "tiempo_min": 20,
+    "pasos": [
+      "Quita las puntas a 2 tazas de ejotes y córtalos en trozos de 2 cm.",
+      "Cuécelos en agua con sal 5 minutos y escúrrelos.",
+      "Sofríe ¼ de cebolla y 1 tomate picados en 1 cucharada de aceite, 3 minutos.",
+      "Agrega los ejotes y cocina 2 minutos más.",
+      "Vierte 3 huevos batidos con sal y revuelve hasta que cuajen."
+    ]
+  },
+  {
+    "nombre": "Ensalada de ejotes con papa",
+    "ingredientes": [
+      "ejote",
+      "papa",
+      "zanahoria",
+      "limon"
+    ],
+    "tiempo_min": 25,
+    "pasos": [
+      "Corta 2 tazas de ejotes en trozos, y 2 papas y 1 zanahoria en cubos.",
+      "Cuece la papa y la zanahoria en agua con sal 10 minutos; agrega los ejotes y cocina 5 minutos más.",
+      "Escúrrelas y pásalas por agua fría para que no se sigan cociendo.",
+      "Aliña con el jugo de 1 limón, 2 cucharadas de aceite, sal y pimienta.",
+      "Sirve fría o a temperatura ambiente."
+    ]
   }
 ]

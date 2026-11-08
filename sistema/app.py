@@ -25,7 +25,8 @@ EMOJI = {
     "manzana": "🍎", "naranja": "🍊", "pan": "🍞", "papa": "🥔", "pasta": "🍝",
     "pepino": "🥒", "pera": "🍐", "pimiento": "🫑", "pina": "🍍", "platano": "🍌",
     "pollo": "🍗", "queso": "🧀", "sandia": "🍉", "soya": "🫘", "tomate": "🍅",
-    "tortilla": "🫓", "uvas": "🍇", "zanahoria": "🥕",
+    "tortilla": "🫓", "uvas": "🍇", "zanahoria": "🥕", "calabaza": "🎃", "papaya": "🍈",
+    "ejote": "🫛",
 }
 SUGERIDOS = ["huevo", "tomate", "cebolla", "papa", "pollo", "queso", "tortilla", "aguacate"]
 
@@ -191,7 +192,7 @@ with tab_ing:
 
     detectados = []
     if imagenes:
-        cols = st.columns(min(4, len(imagenes)))
+        cols = st.columns(4)  # siempre 4 para que una sola foto no ocupe todo el ancho
         for i, (nombre, img) in enumerate(imagenes):
             res = clasificar(modelo, clases, img, umbral)
             top, estado = res["top"], res["estado"]
