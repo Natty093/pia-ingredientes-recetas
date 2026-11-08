@@ -11,10 +11,11 @@ y recomienda recetas con un **sistema de recomendación por similitud**
 | Ingredientes que reconoce la CNN | **36** frutas y verduras |
 | Exactitud en prueba | **90.0 %** (806 imágenes que el modelo nunca vio) |
 | Exactitud en validación | 91.8 % |
-| Recetas | **75** |
+| Recetas | **101** |
 
-La CNN reconoce frutas y verduras. Los ingredientes de despensa (huevo, pollo, queso, arroz,
-frijol, leche, pasta, tortilla, pan, crema…) se agregan a mano en la app.
+El modelo incluido reconoce frutas y verduras. Los ingredientes de despensa (huevo, pollo, queso, arroz,
+frijol, leche, pasta, tortilla, pan, crema…) se agregan a mano en la app. Para que la CNN también
+reconozca huevo, queso, leche y harina, reentrénala con el dataset de Roboflow (ver *Reentrenar el modelo*).
 
 Métricas por clase en `sistema/modelo/reporte_clasificacion.txt`, gráficas en
 `sistema/modelo/curvas_entrenamiento.png` y `sistema/modelo/matriz_confusion.png`, y el detalle
@@ -28,10 +29,11 @@ sistema/
 ├── recommender.py          # Motor de recomendación
 ├── vision.py               # Preparación de la foto (EXIF) y clasificación con estado
 ├── preparar_kaggle.py      # Convierte el dataset de Kaggle y elimina duplicados
+├── preparar_roboflow.py    # Agrega huevo, queso, leche y harina desde Roboflow
 ├── dividir_dataset.py      # Divide el dataset en train/val/test (70/15/15)
 ├── agregar_vegetales.py    # Agrega el segundo dataset (Vegetable Image Dataset)
 ├── pruebas.py              # Pruebas por lote -> resultados_pruebas.csv
-├── recetas.json            # Base de 75 recetas
+├── recetas.json            # Base de 101 recetas
 ├── requirements.txt
 ├── data/                   # train/ val/ test/ (se genera, no se sube a git)
 ├── modelo/                 # modelo entrenado, clases.json, métricas, gráficas, log
@@ -78,6 +80,7 @@ también están en train). Sin este paso, la misma foto queda en entrenamiento y
 exactitud medida sale inflada. Quedan 2,915 imágenes únicas: 2,024 de entrenamiento, 421 de
 validación y 470 de prueba.
 
+### 1b. Segundo dataset: Vegetable Image Dataset (incluido en el modelo)
 Después se agrega un segundo dataset de Kaggle, **Vegetable Image Dataset**
 (https://www.kaggle.com/datasets/misrakahmed/vegetable-image-dataset), con fotos de verduras en
 mercados y cultivos. Descomprímelo fuera del repo y ejecuta:
@@ -90,6 +93,30 @@ También elimina duplicados por MD5. No usa su clase *Radish*, porque es rábano
 distinto del rábano rojo. Las fotos que ya estaban en `data/` no cambian de conjunto, así que el
 modelo nuevo se puede comparar con el anterior usando las mismas fotos de prueba. Quedan 5,115
 imágenes: 3,564 de entrenamiento, 745 de validación y 806 de prueba.
+
+### 1c. (Opcional) Agregar huevo, queso, leche y harina
+Dataset de Roboflow **recipes** (https://universe.roboflow.com/thatonenerds-space/recipes-bkrot).
+Descárgalo en formato **Folder Structure** (pide crear una cuenta gratuita; revisa su licencia
+antes de usarlo), descomprímelo en `sistema/roboflow/` (debe quedar `roboflow/train/eggs/...`) y,
+**después** de `preparar_kaggle.py` y **antes** de `dividir_dataset.py`, ejecuta:
+```bash
+python preparar_roboflow.py --origen roboflow --destino crudo
+```
+- Toma solo `eggs`, `cheese`, `milk` y `flour` (→ huevo, queso, leche, harina). Las demás clases
+  se ignoran para no mezclar en una misma clase fotos de dos datasets.
+- Deja **una foto por original**: Roboflow guarda varias copias aumentadas (volteadas, con otro
+  brillo) de cada foto, y si una cae en train y otra en test la exactitud sale inflada.
+- Limita cada clase a 120 fotos (`--max`) para que quede parecida a las de Kaggle.
+
+Si ya tenías una carpeta `data/`, borra `data/train`, `data/val` y `data/test` antes de volver a
+ejecutar `dividir_dataset.py` (el script se niega a mezclar una división vieja con una nueva).
+
+Para agregar un ingrediente con fotos propias (por ejemplo pollo), crea `crudo/pollo/` con
+40-60 fotos tomadas con celular antes de `dividir_dataset.py`.
+
+> **Limitación:** las clases nuevas vienen de otro dataset con otro estilo de foto (fondo,
+> iluminación). El modelo puede aprender a distinguir el estilo y no solo el ingrediente: en el
+> conjunto de prueba salen bien, pero con fotos de cocina reales pueden fallar más.
 
 ### 2. Entrenar
 ```bash

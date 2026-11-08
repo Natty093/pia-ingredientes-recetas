@@ -1153,6 +1153,452 @@
     ]
   },
   {
+    "nombre": "Hot cakes",
+    "ingredientes": [
+      "harina",
+      "huevo",
+      "leche",
+      "azucar",
+      "aceite"
+    ],
+    "tiempo_min": 20,
+    "pasos": [
+      "Mezcla 1 ½ tazas de harina, 2 cucharadas de azúcar, 1 cucharada de polvo para hornear (si tienes) y una pizca de sal.",
+      "En otro tazón bate 1 huevo con 1 ¼ tazas de leche y 2 cucharadas de aceite.",
+      "Une los líquidos con los secos y mezcla solo hasta integrar; algunos grumos están bien.",
+      "Calienta un sartén a fuego medio-bajo, engrásalo ligeramente y vierte ¼ de taza de mezcla por hot cake.",
+      "Voltéalo cuando salgan burbujas en la superficie y cocina 1 minuto más. Sirve con miel o fruta."
+    ]
+  },
+  {
+    "nombre": "Hot cakes de plátano",
+    "ingredientes": [
+      "platano",
+      "huevo",
+      "harina",
+      "leche"
+    ],
+    "tiempo_min": 20,
+    "pasos": [
+      "Machaca 1 plátano maduro con un tenedor hasta hacerlo puré.",
+      "Agrega 1 huevo, ½ taza de leche y ¾ de taza de harina, y mezcla hasta integrar.",
+      "Calienta un sartén engrasado a fuego medio-bajo y vierte porciones pequeñas de mezcla.",
+      "Voltea cuando la orilla se vea cocida y dora 1 minuto del otro lado.",
+      "Sirve con rodajas de plátano o un poco de miel."
+    ]
+  },
+  {
+    "nombre": "Crepas de fresa",
+    "ingredientes": [
+      "harina",
+      "huevo",
+      "leche",
+      "fresa",
+      "azucar"
+    ],
+    "tiempo_min": 30,
+    "pasos": [
+      "Licúa 1 taza de harina, 2 huevos, 1 ½ tazas de leche y una pizca de sal hasta tener una mezcla líquida y sin grumos.",
+      "Deja reposar la mezcla 10 minutos.",
+      "Calienta un sartén antiadherente engrasado, vierte ¼ de taza de mezcla y gíralo para cubrir el fondo.",
+      "Cocina 1 minuto por lado y repite con el resto.",
+      "Rellena con fresas rebanadas y espolvorea azúcar. Dóblalas en cuartos y sirve."
+    ]
+  },
+  {
+    "nombre": "Tortillas de harina",
+    "ingredientes": [
+      "harina",
+      "aceite",
+      "sal",
+      "agua"
+    ],
+    "tiempo_min": 45,
+    "pasos": [
+      "Mezcla 2 tazas de harina con 1 cucharadita de sal y ¼ de taza de aceite, frotando con los dedos hasta que parezca arena.",
+      "Agrega poco a poco ¾ de taza de agua tibia y amasa 5 minutos hasta tener una masa suave.",
+      "Haz 10 bolitas, tápalas con un trapo y déjalas reposar 15 minutos.",
+      "Extiende cada bolita con un rodillo hasta que quede delgada.",
+      "Cocínalas en un comal caliente unos 30 segundos por lado, hasta que se inflen y tengan manchas doradas."
+    ]
+  },
+  {
+    "nombre": "Empanadas de queso",
+    "ingredientes": [
+      "harina",
+      "queso",
+      "huevo",
+      "aceite"
+    ],
+    "tiempo_min": 45,
+    "pasos": [
+      "Mezcla 2 tazas de harina, 1 huevo, ⅓ de taza de aceite, una pizca de sal y el agua necesaria para formar una masa suave.",
+      "Deja reposar la masa 10 minutos y divídela en 10 bolitas.",
+      "Extiende cada bolita en un círculo y pon al centro 2 cucharadas de queso rallado.",
+      "Dobla a la mitad y sella la orilla apretando con un tenedor.",
+      "Fríelas en aceite caliente hasta que estén doradas, o hornéalas a 200 °C por 20 minutos."
+    ]
+  },
+  {
+    "nombre": "Huevos rancheros",
+    "ingredientes": [
+      "huevo",
+      "tortilla",
+      "tomate",
+      "chile",
+      "cebolla",
+      "ajo",
+      "frijol"
+    ],
+    "tiempo_min": 20,
+    "pasos": [
+      "Licúa 2 tomates, 1 chile, ¼ de cebolla y 1 diente de ajo con sal.",
+      "Fríe la salsa en 1 cucharada de aceite y deja que hierva 5 minutos.",
+      "Calienta 2 tortillas y úntales frijoles refritos.",
+      "Fríe 2 huevos estrellados y colócalos sobre las tortillas.",
+      "Baña con la salsa caliente y sirve de inmediato."
+    ]
+  },
+  {
+    "nombre": "Huevo con papa",
+    "ingredientes": [
+      "huevo",
+      "papa",
+      "cebolla"
+    ],
+    "tiempo_min": 20,
+    "pasos": [
+      "Pela 1 papa y córtala en cubos pequeños.",
+      "Fríela en 2 cucharadas de aceite a fuego medio unos 10 minutos, hasta que esté suave y dorada.",
+      "Agrega ¼ de cebolla picada y cocina 2 minutos.",
+      "Bate 3 huevos con sal, viértelos sobre la papa y revuelve hasta que cuajen.",
+      "Sirve con tortillas y salsa."
+    ]
+  },
+  {
+    "nombre": "Huevos con espinaca",
+    "ingredientes": [
+      "huevo",
+      "espinaca",
+      "cebolla",
+      "queso"
+    ],
+    "tiempo_min": 15,
+    "pasos": [
+      "Lava y pica 2 tazas de espinaca.",
+      "Sofríe ¼ de cebolla picada en 1 cucharada de aceite hasta que esté transparente.",
+      "Agrega la espinaca y cocina 2 minutos, hasta que se marchite.",
+      "Incorpora 3 huevos batidos con sal y revuelve hasta que cuajen.",
+      "Espolvorea queso desmoronado encima y sirve."
+    ]
+  },
+  {
+    "nombre": "Omelette de queso y pimiento",
+    "ingredientes": [
+      "huevo",
+      "queso",
+      "pimiento",
+      "cebolla",
+      "leche"
+    ],
+    "tiempo_min": 15,
+    "pasos": [
+      "Pica ½ pimiento y ¼ de cebolla y sofríelos 3 minutos en un sartén con aceite. Retíralos.",
+      "Bate 3 huevos con 2 cucharadas de leche y sal.",
+      "Vierte el huevo en el sartén a fuego bajo y deja que cuaje sin mover.",
+      "Cuando la superficie esté casi firme, pon el pimiento, la cebolla y ½ taza de queso en una mitad.",
+      "Dobla el omelette a la mitad, tapa 1 minuto para que se derrita el queso y sirve."
+    ]
+  },
+  {
+    "nombre": "Flan casero",
+    "ingredientes": [
+      "huevo",
+      "leche",
+      "azucar"
+    ],
+    "tiempo_min": 60,
+    "pasos": [
+      "Derrite ½ taza de azúcar en una olla a fuego medio hasta que tome color dorado; viértela en un molde para hornear.",
+      "Licúa 4 huevos, 2 tazas de leche y ½ taza de azúcar.",
+      "Vierte la mezcla sobre el caramelo y cubre el molde con papel aluminio.",
+      "Hornea a baño María a 180 °C durante 50 minutos, hasta que al picarlo con un palillo salga limpio.",
+      "Deja enfriar, refrigera al menos 2 horas y desmolda volteándolo sobre un plato."
+    ]
+  },
+  {
+    "nombre": "Arroz con leche",
+    "ingredientes": [
+      "arroz",
+      "leche",
+      "azucar",
+      "agua"
+    ],
+    "tiempo_min": 40,
+    "pasos": [
+      "Enjuaga ½ taza de arroz y cuécelo en 1 taza de agua (con una raja de canela si tienes) hasta que se absorba el agua.",
+      "Agrega 3 tazas de leche y cocina a fuego bajo, moviendo seguido para que no se pegue.",
+      "Cuando espese, unos 20 minutos, añade ½ taza de azúcar.",
+      "Cocina 5 minutos más y retira del fuego; espesa más al enfriarse.",
+      "Sirve tibio o frío."
+    ]
+  },
+  {
+    "nombre": "Atole de elote",
+    "ingredientes": [
+      "maiz",
+      "leche",
+      "azucar"
+    ],
+    "tiempo_min": 30,
+    "pasos": [
+      "Desgrana 3 elotes.",
+      "Licúa los granos con 2 tazas de leche y cuela la mezcla.",
+      "Cocínala en una olla a fuego medio, moviendo sin parar para que no se pegue.",
+      "Agrega 1 taza más de leche y azúcar al gusto.",
+      "Cuando espese, unos 15 minutos, sirve caliente."
+    ]
+  },
+  {
+    "nombre": "Pan de elote",
+    "ingredientes": [
+      "maiz",
+      "huevo",
+      "leche",
+      "harina",
+      "azucar"
+    ],
+    "tiempo_min": 50,
+    "pasos": [
+      "Precalienta el horno a 180 °C y engrasa un molde.",
+      "Licúa los granos de 4 elotes con 3 huevos y ½ taza de leche.",
+      "Agrega ½ taza de harina, ½ taza de azúcar y 1 cucharadita de polvo para hornear, y licúa poco.",
+      "Vierte la mezcla en el molde.",
+      "Hornea 40 minutos o hasta que al picarlo con un palillo salga limpio."
+    ]
+  },
+  {
+    "nombre": "Panqué de plátano",
+    "ingredientes": [
+      "platano",
+      "harina",
+      "huevo",
+      "leche",
+      "azucar",
+      "aceite"
+    ],
+    "tiempo_min": 60,
+    "pasos": [
+      "Precalienta el horno a 180 °C y engrasa un molde para panqué.",
+      "Machaca 3 plátanos maduros y mézclalos con 2 huevos, ⅓ de taza de aceite, ½ taza de leche y ¾ de taza de azúcar.",
+      "Incorpora 2 tazas de harina con 1 cucharadita de polvo para hornear, sin batir de más.",
+      "Vierte en el molde y hornea 45 minutos, hasta que un palillo salga limpio.",
+      "Deja enfriar 10 minutos antes de desmoldar."
+    ]
+  },
+  {
+    "nombre": "Licuado de plátano",
+    "ingredientes": [
+      "platano",
+      "leche"
+    ],
+    "tiempo_min": 5,
+    "pasos": [
+      "Pela 1 plátano y córtalo en trozos.",
+      "Licúalo con 1 taza de leche fría (y azúcar o miel si quieres).",
+      "Sirve de inmediato."
+    ]
+  },
+  {
+    "nombre": "Licuado de fresa",
+    "ingredientes": [
+      "fresa",
+      "leche"
+    ],
+    "tiempo_min": 5,
+    "pasos": [
+      "Lava 1 taza de fresas y quítales el tallo.",
+      "Licúalas con 1 taza de leche fría y azúcar al gusto.",
+      "Sirve de inmediato."
+    ]
+  },
+  {
+    "nombre": "Licuado de mango",
+    "ingredientes": [
+      "mango",
+      "leche"
+    ],
+    "tiempo_min": 5,
+    "pasos": [
+      "Pela 1 mango y corta la pulpa en trozos.",
+      "Licúala con 1 taza de leche fría y azúcar al gusto.",
+      "Sirve de inmediato."
+    ]
+  },
+  {
+    "nombre": "Papas gratinadas",
+    "ingredientes": [
+      "papa",
+      "queso",
+      "leche",
+      "crema",
+      "ajo"
+    ],
+    "tiempo_min": 45,
+    "pasos": [
+      "Precalienta el horno a 200 °C. Pela 4 papas y rebánalas delgadas.",
+      "Calienta 1 taza de leche con ½ taza de crema, 1 diente de ajo picado y sal.",
+      "Acomoda las papas en capas en un refractario y báñalas con la mezcla.",
+      "Cubre con 1 taza de queso rallado.",
+      "Hornea 35 minutos, hasta que las papas estén suaves y el queso dorado."
+    ]
+  },
+  {
+    "nombre": "Macarrones con queso",
+    "ingredientes": [
+      "pasta",
+      "queso",
+      "leche",
+      "harina"
+    ],
+    "tiempo_min": 25,
+    "pasos": [
+      "Cuece 250 g de pasta en agua con sal y escúrrela.",
+      "En una olla derrite 2 cucharadas de mantequilla o aceite y agrega 2 cucharadas de harina; mueve 1 minuto.",
+      "Vierte 2 tazas de leche poco a poco, sin dejar de mover, hasta que espese.",
+      "Agrega 1 ½ tazas de queso rallado y mueve hasta que se derrita.",
+      "Mezcla la salsa con la pasta y sirve caliente."
+    ]
+  },
+  {
+    "nombre": "Coliflor gratinada",
+    "ingredientes": [
+      "coliflor",
+      "queso",
+      "leche",
+      "harina"
+    ],
+    "tiempo_min": 35,
+    "pasos": [
+      "Corta 1 coliflor en ramitos y cuécela en agua con sal 8 minutos. Escúrrela.",
+      "Prepara una salsa: dora 2 cucharadas de harina en 2 de aceite y agrega 1 ½ tazas de leche moviendo hasta que espese.",
+      "Acomoda la coliflor en un refractario y báñala con la salsa.",
+      "Cubre con 1 taza de queso rallado.",
+      "Hornea a 200 °C por 15 minutos, hasta que se dore."
+    ]
+  },
+  {
+    "nombre": "Tortitas de papa con queso",
+    "ingredientes": [
+      "papa",
+      "queso",
+      "huevo",
+      "harina"
+    ],
+    "tiempo_min": 35,
+    "pasos": [
+      "Cuece 3 papas, pélalas y hazlas puré.",
+      "Mezcla el puré con 1 taza de queso rallado, 2 cucharadas de harina y sal, y forma tortitas.",
+      "Bate 2 huevos a punto de turrón.",
+      "Pasa cada tortita por el huevo y fríela en aceite caliente hasta que dore por ambos lados.",
+      "Escúrrelas en papel absorbente y sirve con salsa o ensalada."
+    ]
+  },
+  {
+    "nombre": "Calabacitas con queso",
+    "ingredientes": [
+      "calabacita",
+      "tomate",
+      "cebolla",
+      "chile",
+      "queso"
+    ],
+    "tiempo_min": 25,
+    "pasos": [
+      "Corta 4 calabacitas en cubos y pica 1 tomate, ¼ de cebolla y 1 chile.",
+      "Sofríe la cebolla y el chile en 1 cucharada de aceite.",
+      "Agrega el tomate y cocina 3 minutos.",
+      "Añade las calabacitas con sal, tapa y cocina 10 minutos a fuego bajo.",
+      "Incorpora 1 taza de queso en cubos y tapa hasta que se suavice."
+    ]
+  },
+  {
+    "nombre": "Sopa de tortilla",
+    "ingredientes": [
+      "tortilla",
+      "tomate",
+      "cebolla",
+      "ajo",
+      "chile",
+      "crema",
+      "queso",
+      "aguacate"
+    ],
+    "tiempo_min": 35,
+    "pasos": [
+      "Corta 6 tortillas en tiras y fríelas hasta que estén crujientes.",
+      "Licúa 3 tomates, ¼ de cebolla, 1 diente de ajo y 1 chile con 4 tazas de agua o caldo.",
+      "Fríe el caldo en una olla con 1 cucharada de aceite, sazona con sal y deja hervir 10 minutos.",
+      "Sirve el caldo sobre las tiras de tortilla.",
+      "Acompaña con crema, queso y cubos de aguacate."
+    ]
+  },
+  {
+    "nombre": "Enfrijoladas",
+    "ingredientes": [
+      "tortilla",
+      "frijol",
+      "queso",
+      "crema",
+      "cebolla"
+    ],
+    "tiempo_min": 25,
+    "pasos": [
+      "Licúa 2 tazas de frijoles cocidos con su caldo hasta tener una salsa espesa.",
+      "Calienta la salsa en un sartén con 1 cucharada de aceite y sal.",
+      "Pasa 8 tortillas calientes por la salsa, dóblalas y acomódalas en un plato.",
+      "Baña con más salsa de frijol.",
+      "Decora con queso desmoronado, crema y cebolla en rodajas."
+    ]
+  },
+  {
+    "nombre": "Quiche de espinaca",
+    "ingredientes": [
+      "harina",
+      "huevo",
+      "leche",
+      "queso",
+      "espinaca",
+      "cebolla"
+    ],
+    "tiempo_min": 60,
+    "pasos": [
+      "Mezcla 1 ½ tazas de harina, ⅓ de taza de aceite, una pizca de sal y agua fría hasta formar una masa; cubre con ella un molde.",
+      "Sofríe ½ cebolla picada y 2 tazas de espinaca hasta que se marchite.",
+      "Bate 3 huevos con 1 taza de leche, sal y 1 taza de queso rallado.",
+      "Pon la espinaca sobre la masa y vierte encima la mezcla de huevo.",
+      "Hornea a 180 °C por 35 minutos, hasta que el centro esté firme."
+    ]
+  },
+  {
+    "nombre": "Espinacas con crema",
+    "ingredientes": [
+      "espinaca",
+      "crema",
+      "ajo",
+      "cebolla",
+      "queso"
+    ],
+    "tiempo_min": 20,
+    "pasos": [
+      "Lava y pica 4 tazas de espinaca.",
+      "Sofríe ¼ de cebolla y 1 diente de ajo picados en 1 cucharada de aceite.",
+      "Agrega la espinaca y cocina hasta que se marchite.",
+      "Incorpora ½ taza de crema y sal, y cocina 3 minutos.",
+      "Espolvorea queso rallado y sirve."
+    ]
+  },
+  {
     "nombre": "Crema de calabaza",
     "ingredientes": [
       "calabaza",

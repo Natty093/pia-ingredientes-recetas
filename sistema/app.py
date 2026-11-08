@@ -20,7 +20,7 @@ EMOJI = {
     "aguacate": "🥑", "ajo": "🧄", "arroz": "🍚", "berenjena": "🍆", "brocoli": "🥦",
     "calabacita": "🥒", "camote": "🍠", "cebolla": "🧅", "champinon": "🍄", "chicharo": "🫛",
     "chile": "🌶️", "col": "🥬", "coliflor": "🥦", "crema": "🥛", "espinaca": "🥬",
-    "fresa": "🍓", "frijol": "🫘", "huevo": "🥚", "jengibre": "🫚", "kiwi": "🥝",
+    "fresa": "🍓", "frijol": "🫘", "harina": "🌾", "huevo": "🥚", "jengibre": "🫚", "kiwi": "🥝",
     "leche": "🥛", "lechuga": "🥬", "limon": "🍋", "maiz": "🌽", "mango": "🥭",
     "manzana": "🍎", "naranja": "🍊", "pan": "🍞", "papa": "🥔", "pasta": "🍝",
     "pepino": "🥒", "pera": "🍐", "pimiento": "🫑", "pina": "🍍", "platano": "🍌",
@@ -171,8 +171,8 @@ with st.sidebar:
     min_cob = st.slider("Cobertura mínima de la receta", 0.1, 1.0, 0.3, 0.05,
                         help="Fracción de los ingredientes de la receta que ya debes tener.")
     st.divider()
-    st.caption(f"La CNN reconoce **{len(ingredientes_cnn)}** frutas y verduras. Los ingredientes de despensa "
-               "(huevo, pollo, queso, tortilla...) se agregan a mano.")
+    st.caption(f"La CNN reconoce **{len(ingredientes_cnn)}** ingredientes. Los que no reconoce "
+               "(pollo, tortilla, arroz...) se agregan a mano.")
     st.caption("Modelo: MobileNetV2 con transfer learning · Recomendador: cobertura + Jaccard + coseno.")
 
 tab_ing, tab_nombre = st.tabs(["Ingredientes", "Nombre de receta"])
