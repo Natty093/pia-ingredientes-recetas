@@ -3,6 +3,7 @@ Interfaz Streamlit: sube fotos -> CNN detecta ingredientes -> recomienda recetas
 Uso:  streamlit run app.py
 """
 import json
+import os
 from collections import Counter
 from datetime import datetime
 from html import escape
@@ -20,7 +21,7 @@ EMOJI = {
     "aguacate": "🥑", "ajo": "🧄", "arroz": "🍚", "berenjena": "🍆", "brocoli": "🥦",
     "calabacita": "🥒", "camote": "🍠", "cebolla": "🧅", "champinon": "🍄", "chicharo": "🫛",
     "chile": "🌶️", "col": "🥬", "coliflor": "🥦", "crema": "🥛", "espinaca": "🥬",
-    "fresa": "🍓", "frijol": "🫘", "harina": "🌾", "huevo": "🥚", "jengibre": "🫚", "kiwi": "🥝",
+    "fresa": "🍓", "frijol": "🫘", "harina": "🌾", "jamon": "🥓", "huevo": "🥚", "jengibre": "🫚", "kiwi": "🥝",
     "leche": "🥛", "lechuga": "🥬", "limon": "🍋", "maiz": "🌽", "mango": "🥭",
     "manzana": "🍎", "naranja": "🍊", "pan": "🍞", "papa": "🥔", "pasta": "🍝",
     "pepino": "🥒", "pera": "🍐", "pimiento": "🫑", "pina": "🍍", "platano": "🍌",
@@ -84,9 +85,11 @@ st.markdown("""
 @st.cache_resource
 def cargar_modelo():
     import tensorflow as tf
-    ruta = BASE / "modelo" / "modelo_ingredientes.keras"
-    modelo = tf.keras.models.load_model(ruta)
-    clases = json.loads((BASE / "modelo" / "clases.json").read_text(encoding="utf-8"))
+    # Carpeta del modelo: "modelo" por defecto. Para probar otro sin reemplazarlo:
+    #   PIA_MODELO=modelo_despensa python -m streamlit run app.py
+    carpeta = BASE / os.environ.get("PIA_MODELO", "modelo")
+    modelo = tf.keras.models.load_model(carpeta / "modelo_ingredientes.keras")
+    clases = json.loads((carpeta / "clases.json").read_text(encoding="utf-8"))
     return modelo, [normalizar(c) for c in clases]
 
 

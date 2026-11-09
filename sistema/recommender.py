@@ -17,7 +17,7 @@ BASICOS = {"sal", "agua", "aceite", "pimienta", "azucar"}  # se asumen disponibl
 
 _BONITO = {"pina": "piña", "champinon": "champiñón", "limon": "limón",
            "platano": "plátano", "azucar": "azúcar", "brocoli": "brócoli",
-           "chicharo": "chícharo", "rabano": "rábano", "sandia": "sandía"}
+           "chicharo": "chícharo", "rabano": "rábano", "sandia": "sandía", "jamon": "jamón"}
 
 
 def normalizar(texto):
