@@ -1,42 +1,48 @@
               precision    recall  f1-score   support
 
-         ajo       0.80      0.86      0.83        14
-   berenjena       0.94      0.92      0.93        36
-     betabel       0.79      0.85      0.81        13
-     brocoli       1.00      0.97      0.99        38
-    calabaza       1.00      1.00      1.00        38
-      camote       0.67      0.73      0.70        11
-     cebolla       0.67      0.67      0.67        12
-    chicharo       0.74      0.93      0.82        15
-       chile       0.78      0.78      0.78        27
-         col       0.92      1.00      0.96        36
-    coliflor       1.00      0.94      0.97        35
-       ejote       0.97      0.97      0.97        38
-    espinaca       0.79      0.73      0.76        15
-     granada       0.92      0.92      0.92        12
-    jengibre       0.83      0.91      0.87        11
-        kiwi       1.00      0.93      0.96        14
-     lechuga       0.85      0.73      0.79        15
-       limon       0.86      1.00      0.92        12
-        maiz       0.88      0.96      0.92        24
-       mango       0.79      0.92      0.85        12
-     manzana       0.58      0.58      0.58        12
-        nabo       0.87      0.87      0.87        15
-     naranja       0.67      0.73      0.70        11
-        papa       0.91      0.86      0.88        35
-      papaya       1.00      1.00      1.00        38
-      pepino       0.97      0.95      0.96        37
-        pera       0.83      0.77      0.80        13
-    pimiento       0.93      0.90      0.92        61
-        pina       0.94      1.00      0.97        15
+         ajo       0.76      0.93      0.84        14
+       arroz       0.62      0.71      0.67         7
+   berenjena       0.90      0.69      0.78        13
+     betabel       0.71      0.77      0.74        13
+      camote       0.88      0.64      0.74        11
+     cebolla       0.89      0.67      0.76        12
+    chicharo       0.87      0.87      0.87        15
+       chile       0.68      0.70      0.69        27
+         col       0.87      1.00      0.93        13
+    coliflor       0.83      0.83      0.83        12
+    espinaca       0.93      0.93      0.93        15
+      frijol       0.75      0.75      0.75         8
+     granada       0.71      1.00      0.83        12
+      harina       0.61      0.74      0.67        19
+       huevo       0.92      0.61      0.73        18
+       jamon       0.82      1.00      0.90         9
+    jengibre       0.75      0.82      0.78        11
+        kiwi       1.00      0.86      0.92        14
+       leche       0.83      0.83      0.83        18
+     lechuga       0.92      0.80      0.86        15
+       limon       1.00      0.92      0.96        12
+        maiz       0.86      1.00      0.92        24
+       mango       0.63      1.00      0.77        12
+     manzana       0.73      0.67      0.70        12
+        nabo       0.65      0.87      0.74        15
+     naranja       0.90      0.82      0.86        11
+         pan       0.73      0.89      0.80         9
+        papa       0.75      1.00      0.86        12
+      pepino       0.87      0.93      0.90        14
+        pera       0.80      0.92      0.86        13
+    pimiento       0.89      0.87      0.88        38
+        pina       0.93      0.93      0.93        15
      platano       1.00      0.92      0.96        12
-      rabano       0.75      0.46      0.57        13
-      sandia       1.00      1.00      1.00        12
-        soya       1.00      0.60      0.75        15
-      tomate       0.84      0.97      0.90        38
-        uvas       1.00      0.87      0.93        15
-   zanahoria       0.92      1.00      0.96        36
+       pollo       1.00      0.60      0.75         5
+       queso       1.00      0.53      0.70        15
+      rabano       1.00      0.31      0.47        13
+      sandia       0.92      1.00      0.96        12
+        soya       0.83      0.67      0.74        15
+      tomate       0.78      0.93      0.85        15
+    tortilla       0.80      0.67      0.73         6
+        uvas       0.92      0.73      0.81        15
+   zanahoria       0.92      0.92      0.92        13
 
-    accuracy                           0.90       806
-   macro avg       0.87      0.87      0.87       806
-weighted avg       0.90      0.90      0.90       806
+    accuracy                           0.82       584
+   macro avg       0.84      0.82      0.81       584
+weighted avg       0.84      0.82      0.82       584
