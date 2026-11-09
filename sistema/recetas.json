@@ -1692,5 +1692,89 @@
       "Aliña con el jugo de 1 limón, 2 cucharadas de aceite, sal y pimienta.",
       "Sirve fría o a temperatura ambiente."
     ]
+  },
+  {
+    "nombre": "Huevo con jamón",
+    "ingredientes": [
+      "huevo",
+      "jamon",
+      "cebolla"
+    ],
+    "tiempo_min": 10,
+    "pasos": [
+      "Pica 2 rebanadas de jamón y ¼ de cebolla.",
+      "Sofríe la cebolla en 1 cucharadita de aceite hasta que esté transparente.",
+      "Agrega el jamón y cocina 1 minuto.",
+      "Incorpora 2 huevos batidos con sal y revuelve hasta que cuajen.",
+      "Sirve con tortillas o pan."
+    ]
+  },
+  {
+    "nombre": "Sincronizadas",
+    "ingredientes": [
+      "tortilla",
+      "jamon",
+      "queso"
+    ],
+    "tiempo_min": 10,
+    "pasos": [
+      "Pon una tortilla en un comal caliente.",
+      "Cúbrela con queso rallado y 1 rebanada de jamón.",
+      "Tapa con otra tortilla y deja que el queso se derrita, unos 2 minutos.",
+      "Voltéala con cuidado y dora el otro lado 1 minuto.",
+      "Córtala en triángulos y sirve con salsa o guacamole."
+    ]
+  },
+  {
+    "nombre": "Sándwich de jamón y queso",
+    "ingredientes": [
+      "pan",
+      "jamon",
+      "queso",
+      "tomate",
+      "lechuga"
+    ],
+    "tiempo_min": 10,
+    "pasos": [
+      "Unta 2 rebanadas de pan con mayonesa o mostaza si tienes.",
+      "Acomoda 2 rebanadas de jamón y 1 de queso.",
+      "Agrega rodajas de tomate y hojas de lechuga.",
+      "Tapa con la otra rebanada de pan.",
+      "Si lo quieres caliente, dóralo en un sartén 2 minutos por lado."
+    ]
+  },
+  {
+    "nombre": "Ensalada de pasta con jamón",
+    "ingredientes": [
+      "pasta",
+      "jamon",
+      "crema",
+      "maiz",
+      "queso"
+    ],
+    "tiempo_min": 25,
+    "pasos": [
+      "Cuece 250 g de pasta corta en agua con sal, escúrrela y déjala enfriar.",
+      "Pica 4 rebanadas de jamón y 100 g de queso en cubos.",
+      "Mezcla la pasta con el jamón, el queso y 1 taza de granos de elote.",
+      "Agrega ½ taza de crema, sal y pimienta, y revuelve.",
+      "Refrigera 15 minutos antes de servir."
+    ]
+  },
+  {
+    "nombre": "Arroz con huevo",
+    "ingredientes": [
+      "arroz",
+      "huevo",
+      "cebolla",
+      "ajo"
+    ],
+    "tiempo_min": 30,
+    "pasos": [
+      "Fríe 1 taza de arroz en 2 cucharadas de aceite con ¼ de cebolla y 1 diente de ajo picados, hasta que dore.",
+      "Agrega 2 tazas de agua y sal, y cocina tapado a fuego bajo 18 minutos.",
+      "Mientras, fríe 2 huevos estrellados.",
+      "Sirve el arroz con un huevo encima de cada porción."
+    ]
   }
 ]

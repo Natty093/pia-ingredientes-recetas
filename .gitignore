@@ -5,3 +5,7 @@ sistema/data/*
 !sistema/data/.gitkeep
 __pycache__/
 *.pyc
+sistema/roboflow/
+sistema/descargas_web/
+sistema/data_*/
+sistema/modelo_*/
